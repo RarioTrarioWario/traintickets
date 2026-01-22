@@ -12,7 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class FastMinecarts : JavaPlugin(), Listener {
     // Define the default maximum speed for minecarts
-    private val vanillaMaxSpeed = 0.4
+    private val vanillaMaxSpeed = 0.5
     // Store the maximum speeds for different block types
     private var _blockMaxSpeeds = mutableMapOf<Material, Double>()
     // Define the types of rail blocks
