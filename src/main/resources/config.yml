@@ -1,6 +1,13 @@
-# List of blocks and their corresponding maximum minecart speeds
-# Blocks must be from https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
-# The default minecart speed is 0.4
-blocks:
-  GRAVEL: 0.8
-  SOUL_SAND: 0.2
+# Configuration for Train Tickets
+
+# Tickets settings
+ tickets:
+   default: unlimited
+   permissions:
+     give: superexpress.ticket.give
+   configurable_material: "<Material_Name>"
+   default_custom_name: "<Ticket_Name>"
+   timed:
+     enabled: true
+     countdown: 30  # duration in seconds
+   reset_speed_when_not_held: true
