@@ -1,13 +1,23 @@
-# Configuration for Train Tickets
+# List of blocks and their corresponding maximum minecart speeds
+# Blocks must be from https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# If a block isn't listed, vanillaMaxSpeed is used.
+blocks:
+  GRAVEL: 0.8
+  SOUL_SAND: 0.2
 
-# Tickets settings
- tickets:
-   default: unlimited
-   permissions:
-     give: superexpress.ticket.give
-   configurable_material: "<Material_Name>"
-   default_custom_name: "<Ticket_Name>"
-   timed:
-     enabled: true
-     countdown: 30  # duration in seconds
-   reset_speed_when_not_held: true
+# Train ticket system
+tickets:
+  enabled: true
+
+  # Default ticket item material (can be overridden in the give command)
+  material: PAPER
+
+  # Default speed multiplier used if a ticket item doesn't specify its own multiplier
+  defaultMultiplier: 1.5
+
+  # Default ticket display names (can be overridden in the give command)
+  unlimitedName: "&bUnlimited Train Ticket"
+  timedName: "&eTimed Train Ticket"
+
+  # Default timed duration (seconds) if not specified in the command
+  timedDefaultSeconds: 600
