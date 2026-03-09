@@ -3,3 +3,14 @@ version: '${project.version}'
 main: top.godbranch.superExpress.FastMinecarts
 api-version: 1.19
 folia-supported: true
+
+commands:
+  superexpress:
+    description: SuperExpress main command
+    usage: "/superexpress ticket give <player> <timed|unlimited> [seconds] [multiplier] [material] [name...]"
+    aliases: [se]
+
+permissions:
+  superexpress.ticket.give:
+    description: Allows giving train tickets
+    default: op
